@@ -5,13 +5,27 @@ export default class App extends Component {
     super();
 
     this.state = {
-      numstomap: [1, 2, 3, 4, 5],
+      numstomap: [
+        {
+          name: "Eidan",
+          description: "asdfrrrrrrr",
+        },
+        {
+          name: "Ronald",
+          description: "asdf",
+        },
+      ],
     };
   }
 
   mapdata() {
-    return this.state.numstomap.map((num) => {
-      return <h1>{num}</h1>;
+    return this.state.numstomap.map((item) => {
+      return (
+        <div>
+          <h1>{item.name}</h1>
+          <h3>{item.description}</h3>
+        </div>
+      );
     });
   }
 
